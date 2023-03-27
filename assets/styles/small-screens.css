@@ -1,0 +1,68 @@
+@media screen and (max-width: 650px) {
+  .navigation {
+    background-color: transparent;
+  }
+
+  #menu-button {
+    display: block;
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+  #close-button {
+    display: none;
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+  #nav-list {
+    position: fixed;
+    background-color: #00000090;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100vh;
+    padding-top: 50px;
+    text-align: left;
+    transition: width 0.5s;
+  }
+
+  #nav-list li {
+    margin: 20px;
+  }
+
+  .header-text h1 {
+    font-size: 10vw;
+    text-shadow: min(0.5vh, 3px) min(0.5vh, 3px) 5px black;
+  }
+
+  .header-text h2 {
+    font-size: 5vw;
+  }
+
+  .sub-title {
+    font-size: 40px !important;
+  }
+
+  .about-image-column {
+    flex-basis: 100%;
+    margin-bottom: 30px;
+  }
+
+  .about-info-column {
+    font-size: 14px;
+  }
+
+  .tab-links {
+    margin-right: 20px;
+  }
+
+  .contact-info-column,
+  .contact-form-column {
+    flex-basis: 100%;
+  }
+
+  form textarea {
+    height: 300px;
+  }
+}

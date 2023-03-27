@@ -1,0 +1,82 @@
+#about-section {
+  padding-top: 80px;
+  color: #ababab;
+}
+
+#about-section .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about-image-column {
+  flex-basis: 35%;
+}
+
+.about-image-column .about-image {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.about-info-column {
+  flex-basis: 60%;
+}
+
+.tab-titles {
+  display: flex;
+  margin: 20px 0 40px;
+}
+
+.tab-links {
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-links::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+
+.tab-links:hover::after {
+  width: 100%;
+}
+
+.active-link::after {
+  width: 50%;
+}
+
+.tab-contents ul {
+  margin-left: 10px;
+}
+
+.tab-contents ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.tab-contents ul li span {
+  font-size: 14px;
+}
+
+.tab-contents {
+  display: none;
+}
+
+.tab-contents.active-tab {
+  display: block;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+}

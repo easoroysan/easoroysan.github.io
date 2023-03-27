@@ -1,34 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Roysan Easo</title>
-    <link rel="stylesheet" href="./assets/styles.css" />
-    <link rel="icon" href="./assets/images/Roysan Professional Picture.jpg" />
-  </head>
-  <body>
-    <header>
-      <h1>Portfolio Currently in Development</h1>
-      <h3>
-        In the mean time, enjoy this gif
-        <span>
-          <a
-            href="https://giphy.com/gifs/dommespace-domme-space-programador-qgQUggAC3Pfv687qPC"
-            >via GIPHY</a
-          >
-        </span>
-      </h3>
-    </header>
-    <section>
-      <iframe
-        src="https://giphy.com/embed/qgQUggAC3Pfv687qPC"
-        width="500"
-        height="800"
-        frameborder="0"
-        class="giphy-embed"
-        allowfullscreen
-      ></iframe>
-    </section>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Roysan Easo's Personal Portfolio" />
+		<meta name="keywords" content="Roysan, Easo, Portfolio, Developer" />
+		<meta name="author" content="Roysan Easo" />
+		<title>Roysan Easo's Personal Portfolio</title>
+		<link rel="stylesheet" href="./assets/styles/style.css" />
+		<link rel="icon" href="./assets/images/r-icon.png" />
+		<script
+			src="https://kit.fontawesome.com/8645d2cc91.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<nav class="navigation">
+			<i id="close-button" class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+			<i id="menu-button" class="fa-solid fa-bars" onclick="openMenu()"></i>
+			<ul id="nav-list">
+				<li><a href="#header-section">Home</a></li>
+				<li><a href="#about-section">About</a></li>
+				<li><a href="#project-section">Projects</a></li>
+				<li><a href="#contact-section">Contact</a></li>
+			</ul>
+		</nav>
 
-    <script src="./assets/script.js"></script>
-  </body>
+		<header id="header-section">
+			<div class="header-banner">
+				<div class="header-text">
+					<h1><span class="red">Roysan</span> Easo</h1>
+					<h2>Application Developer</h2>
+				</div>
+			</div>
+		</header>
+		<!-- ------------------------------------------------- -->
+		<section id="about-section">
+			<div class="container">
+				<div class="about-image-column">
+					<img src="./assets/images/full-picture.jpg" class="about-image" />
+				</div>
+				<div class="about-info-column">
+					<h2 class="sub-title">About Me</h2>
+					<p>
+						I am a motivated developer with
+						<span id="years-experience"></span> years of professional
+						programming experience. I excel in group and autonomous work
+						environments with attention to detail and organized communication.
+						With a passion for problem solving and continuous improvement, I can
+						bring a well-rounded approach to any team.
+					</p>
+
+					<div class="tab-titles">
+						<p class="tab-links active-link" onclick="openTab('skills-tab')">
+							Skills
+						</p>
+						<p class="tab-links" onclick="openTab('experience-tab')">
+							Experience
+						</p>
+						<p class="tab-links" onclick="openTab('education-tab')">
+							Education
+						</p>
+					</div>
+
+					<div id="skills-tab" class="tab-contents active-tab">
+						<div class="skills-container">
+							<div class="front-end-skills">
+								<span class="red">Front End</span>
+								<ul>
+									<li>Typescript</li>
+									<li>Angular</li>
+									<li>React</li>
+									<li>Redux</li>
+								</ul>
+							</div>
+							<div class="back-end-skills">
+								<span class="red">Back End</span>
+								<ul>
+									<li>Ruby on Rails</li>
+									<li>Java</li>
+									<li>Spring Boot</li>
+									<li>PostgreSQL</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div id="experience-tab" class="tab-contents">
+						<span class="red"
+							>Front-End Application Developer at NOV 2019-2023</span
+						>
+						<ul>
+							<li>
+								Refactored one of the company’s oldest applications into a
+								modern, responsive web application
+							</li>
+							<li>
+								Collaborated with non-technical colleagues and UI/UX to
+								streamline development in a fully remote setting
+							</li>
+							<li>
+								Established proper organization of containers and components
+								through custom libraries
+							</li>
+							<li>Performed Code Reviews in an agile environment</li>
+						</ul>
+					</div>
+
+					<div id="education-tab" class="tab-contents">
+						<span class="red">Flatiron Bootcamp 2019</span>
+						<ul>
+							<li>Full Stack Web Development Boot Camp</li>
+							<li>Projects made using Ruby on Rails and React with Redux</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- ------------------------------------------------- -->
+		<section id="project-section">
+			<div class="container">
+				<h2 class="sub-title">My Projects</h2>
+				<div class="project-list">
+					<div class="project-card">
+						<img src="./assets/images/angular-table-preview.png" />
+						<div class="layer">
+							<div class="project-text">
+								<h3>Vehicle Data Table</h3>
+								<p>
+									This is just a small showcase of angular. I have a table that
+									can adapt to many screen sizes. Users can add, edit, and
+									delete data, as well as undo changes through the snackbar. All
+									changes are purely frontend for this project.
+								</p>
+							</div>
+							<div class="project-actions">
+								<a
+									href="https://easoroysan.github.io/angular-data-table/"
+									target="_blank"
+									><button class="project-button">
+										Website
+										<i
+											class="fa-solid fa-arrow-up-right-from-square"
+										></i></button
+								></a>
+								<a
+									href="https://github.com/easoroysan/angular-data-table"
+									target="_blank"
+									><button class="project-button repo">
+										Repository <i class="fa-solid fa-code"></i></button
+								></a>
+							</div>
+						</div>
+					</div>
+					<div class="project-card">
+						<img src="./assets/images/password-generator-preview.png" />
+						<div class="layer">
+							<div class="project-text">
+								<h3>Password Generator</h3>
+								<p>
+									I made this project as I was helping someone else with their
+									password generator. The implementation of unicode was just for
+									fun.
+								</p>
+							</div>
+							<div class="project-actions">
+								<a
+									href="https://easoroysan.github.io/password-generator/"
+									target="_blank"
+									><button class="project-button">
+										Website
+										<i
+											class="fa-solid fa-arrow-up-right-from-square"
+										></i></button
+								></a>
+								<a
+									href="https://github.com/easoroysan/password-generator"
+									target="_blank"
+									><button class="project-button repo">
+										Repository <i class="fa-solid fa-code"></i></button
+								></a>
+							</div>
+						</div>
+					</div>
+					<div class="project-card">
+						<img src="./assets/images/spring-boot-logo.jpg" />
+						<div class="layer">
+							<div class="project-text">
+								<h3>Simple Server</h3>
+								<p>
+									This is a simple back end project that has REST functionality
+									for "Customer". I made sure to include some logic so that a
+									costumer cannot be created without a first name and email.
+								</p>
+							</div>
+							<div class="project-actions">
+								<a
+									href="https://github.com/easoroysan/simpleserver"
+									target="_blank"
+									><button class="project-button repo">
+										Repository <i class="fa-solid fa-code"></i></button
+								></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- ------------------------------------------------- -->
+		<section id="contact-section">
+			<div class="container">
+				<h2 class="sub-title">Contact Me</h2>
+				<div class="contact-details">
+					<div class="contact-info-column">
+						<div class="social-icons">
+							<a href="https://github.com/easoroysan" target="_blank"
+								><i class="fa-brands fa-square-github"> </i>Github</a
+							>
+							<a href="https://www.linkedin.com/in/easoroysan/" target="_blank"
+								><i class="fa-brands fa-linkedin"></i>LinkedIn</a
+							>
+						</div>
+					</div>
+					<div class="contact-form-column">
+						<form id="contact-form">
+							<input
+								type="text"
+								name="Name"
+								placeholder="Your Name"
+								maxlength="50"
+								required
+							/>
+							<input
+								type="email"
+								name="Email"
+								placeholder="Your Email"
+								maxlength="50"
+								required
+							/>
+							<textarea
+								name="Message"
+								rows="6"
+								placeholder="Your Message"
+								maxlength="1000"
+							></textarea>
+							<button type="submit" id="submit-button">Submit</button>
+						</form>
+						<div id="snackbar">Test</div>
+					</div>
+				</div>
+			</div>
+			<div class="copyright">
+				<p>Copyright © Roysan Easo</p>
+			</div>
+		</section>
+
+		<script src="./assets/script.js"></script>
+	</body>
 </html>

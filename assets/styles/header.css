@@ -1,0 +1,92 @@
+.navigation {
+	width: 100%;
+	max-width: 1280px;
+	padding: 10px;
+	position: fixed;
+	z-index: 1;
+	text-align: right;
+	background-color: #00000090;
+}
+
+#menu-button,
+#close-button {
+	display: none;
+	position: absolute;
+	right: 10px;
+	z-index: 2;
+}
+
+#nav-list {
+	position: relative;
+	background-color: transparent;
+	width: inherit;
+	height: inherit;
+	padding-top: 0;
+}
+
+#nav-list li {
+	display: inline-block;
+	list-style: none;
+	margin: 10px 20px;
+}
+
+#nav-list li a {
+	color: white;
+	text-decoration: none;
+	font-size: 18px;
+	position: relative;
+}
+
+#nav-list li a::after {
+	content: "";
+	width: 0;
+	height: 3px;
+	background: #ff004f;
+	position: absolute;
+	left: 0;
+	bottom: -6px;
+	transition: 0.5s;
+}
+
+#nav-list li a:hover::after {
+	width: 100%;
+}
+
+#nav-list li a.active::after {
+	width: 30%;
+}
+
+#header-section {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	background-image: url(../images/banner.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-attachment: fixed;
+}
+
+.header-banner {
+	width: 100%;
+	margin-top: 61px;
+	padding: 5px 0;
+}
+
+.header-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.header-text h1 {
+	font-size: min(7vw, 90px);
+	text-shadow: min(0.5vw, 3px) min(0.5vw, 3px) 5px black;
+}
+
+.header-text h2 {
+	font-size: min(3vw, 40px);
+	text-shadow: min(0.5vw, 3px) min(0.5vw, 3px) 5px black;
+}

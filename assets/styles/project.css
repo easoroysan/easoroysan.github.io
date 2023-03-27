@@ -1,0 +1,80 @@
+#project-section {
+	padding-top: 50px;
+}
+
+.project-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-gap: 40px;
+	margin-top: 50px;
+}
+
+.project-list a {
+	text-decoration: none;
+	color: white;
+}
+
+.project-card {
+	border-radius: 10px;
+	position: relative;
+	overflow: hidden;
+	max-width: 500px;
+}
+
+.project-card img {
+	width: 100%;
+	border-radius: 10px;
+	display: block;
+	transition: transform 0.5s;
+}
+
+.layer {
+	height: 100%;
+	background: rgba(0, 0, 0, 0.8);
+	border-radius: 10px;
+	position: absolute;
+	bottom: 0;
+	display: grid;
+	grid-template-columns: auto;
+	padding: 30px;
+}
+
+.project-actions {
+	align-self: flex-end;
+}
+
+.project-button {
+	display: block;
+	width: 180px;
+	margin: 20px auto;
+	padding: 15px;
+	font-size: 18px;
+	background-color: #ff004f;
+	border: 1px solid #ff004f;
+	border-radius: 6px;
+	color: white;
+	cursor: pointer;
+	transition: background-color 0.5s;
+}
+
+.project-button.repo {
+	background-color: black;
+	margin: 0 auto;
+}
+
+.project-button:hover {
+	background-color: #262626;
+}
+
+.project-button:active {
+	border: 1px solid #262626;
+}
+
+.layer h3 {
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+
+.project-card:hover img {
+	transform: scale(1.1);
+}
