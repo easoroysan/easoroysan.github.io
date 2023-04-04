@@ -4,10 +4,13 @@
 	"description": "",
 	"main": "script.js",
 	"scripts": {
-		"deploy": "gh-pages -d dist"
+		"deploy": "gh-pages -d dist",
+		"reset-dist": "rm -r dist && mkdir dist",
+		"copy-files": "cp index.html dist && cp -r assets dist",
+		"build": "npm run reset-dist && npm run copy-files"
 	},
 	"author": "Roysan Easo",
-	"license": "ISC",
+	"license": "MIT",
 	"dependencies": {
 		"gh-pages": "^5.0.0"
 	}
