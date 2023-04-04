@@ -144,7 +144,18 @@ function addStar() {
 }
 
 Array(200).fill().forEach(addStar);
-renderer.render(scene, camera);
+
+const moonTexture = new THREE.TextureLoader().load(
+	"https://cdn.pixabay.com/photo/2020/02/04/16/59/map-4818828_1280.jpg",
+	moveCamera
+);
+
+const moon = new THREE.Mesh(
+	new THREE.SphereGeometry(10, 32, 32),
+	new THREE.MeshStandardMaterial({ map: moonTexture })
+);
+
+scene.add(moon);
 
 function moveCamera() {
 	const t = document.body.getBoundingClientRect().top;
@@ -153,7 +164,19 @@ function moveCamera() {
 	camera.position.x = t * -0.002;
 	camera.position.y = t * -0.002;
 
+	moon.rotation.y += 0.01;
+
 	renderer.render(scene, camera);
 }
 
 document.body.onscroll = moveCamera;
+
+window.addEventListener("resize", onWindowResize, false);
+
+function onWindowResize() {
+	camera.aspect = window.innerWidth / window.innerHeight;
+	camera.updateProjectionMatrix();
+	renderer.setPixelRatio(window.devicePixelRatio);
+	renderer.setSize(window.innerWidth, window.innerHeight);
+	moveCamera();
+}
