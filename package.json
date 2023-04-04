@@ -1,0 +1,14 @@
+{
+	"name": "easoroysan.github.io",
+	"version": "1.0.0",
+	"description": "",
+	"main": "script.js",
+	"scripts": {
+		"deploy": "gh-pages -d dist"
+	},
+	"author": "Roysan Easo",
+	"license": "ISC",
+	"dependencies": {
+		"gh-pages": "^5.0.0"
+	}
+}
