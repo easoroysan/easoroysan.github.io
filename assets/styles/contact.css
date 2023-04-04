@@ -1,122 +1,121 @@
 #contact-section {
-  padding-top: 50px;
+	padding-top: 50px;
 }
 
 .contact-details {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 .contact-info-column {
-  flex-basis: 35%;
+	flex-basis: 35%;
 }
 
 .contact-form-column {
-  flex-basis: 60%;
+	flex-basis: 60%;
 }
 
 .social-icons {
-  margin-top: 15px;
-  display: flex;
-  flex-direction: column;
+	margin-top: 15px;
+	display: flex;
+	flex-direction: column;
 }
 
 .social-icons a {
-  text-decoration: none;
-  font-size: 30px;
-  margin-bottom: 30px;
-  color: #ababab;
-  display: inline-block;
-  transition: 0.5s;
+	text-decoration: none;
+	font-size: 30px;
+	margin-bottom: 30px;
+	color: #ababab;
+	display: inline-block;
+	transition: 0.5s;
 }
 
 .social-icons a i {
-  color: #ff004f;
-  margin-right: 20px;
+	color: #ff004f;
+	margin-right: 20px;
 }
 
 .social-icons a:hover {
-  color: #ff004f;
-  transform: translateX(10px);
+	color: #ff004f;
+	transform: translateX(10px);
 }
 
 .contact-form-column form {
-  width: 100%;
+	width: 100%;
 }
 
 form input,
 form textarea {
-  width: 100%;
-  border: 0;
-  outline: none;
-  background: #262626;
-  padding: 15px;
-  margin: 15px 0;
-  color: white;
-  font-size: 18px;
-  border-radius: 6px;
+	width: 100%;
+	border: 0;
+	outline: none;
+	background: #262626;
+	padding: 15px;
+	margin: 15px 0;
+	color: white;
+	font-size: 18px;
+	border-radius: 6px;
 }
 
 form textarea {
-  height: 400px;
+	height: 400px;
 }
 
 #submit-button {
-  display: block;
-  width: 180px;
-  margin: 20px auto 50px;
-  padding: 15px;
-  font-size: 18px;
-  background-color: #ff004f;
-  border: 1px solid #ff004f;
-  border-radius: 6px;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.5s;
+	display: block;
+	width: 180px;
+	margin: 20px auto 50px;
+	padding: 15px;
+	font-size: 18px;
+	background-color: #ff004f;
+	border: 1px solid #ff004f;
+	border-radius: 6px;
+	color: white;
+	cursor: pointer;
+	transition: background-color 0.5s;
 }
 
 #submit-button.loading {
-  background-color: #262626;
-  border: 1px solid #262626;
+	background-color: #262626;
+	border: 1px solid #262626;
 }
 
 #submit-button:not(.loading):hover {
-  background-color: #262626;
+	background-color: #262626;
 }
 
 #submit-button:not(.loading):active {
-  border: 1px solid #262626;
+	border: 1px solid #262626;
 }
 
 #snackbar {
-  visibility: hidden;
-  opacity: 0;
-  width: 250px;
-  margin-left: -125px;
-  background-color: white;
-  color: #262626;
-  text-align: center;
-  border-radius: 6px;
-  padding: 15px;
-  position: fixed;
-  z-index: 2;
-  left: 50%;
-  bottom: 30px;
-  font-size: 18px;
-  transition: opacity 0.5s, visibility 0.5s;
+	visibility: hidden;
+	opacity: 0;
+	width: 250px;
+	margin-left: -125px;
+	background-color: white;
+	color: #262626;
+	text-align: center;
+	border-radius: 6px;
+	padding: 15px;
+	position: fixed;
+	z-index: 2;
+	left: 50%;
+	bottom: 30px;
+	font-size: 18px;
+	transition: opacity 0.5s, visibility 0.5s;
 }
 
 #snackbar.show {
-  visibility: visible;
-  opacity: 0.7;
+	visibility: visible;
+	opacity: 0.7;
 }
 
 .copyright {
-  width: 100%;
-  text-align: center;
-  padding: 25px;
-  font-weight: 300;
-  margin-top: 20px;
-  background-color: #262626;
+	text-align: center;
+	padding: 25px;
+	font-weight: 300;
+	margin-top: 20px;
+	background-color: rgb(0, 0, 0, 0.5);
 }
