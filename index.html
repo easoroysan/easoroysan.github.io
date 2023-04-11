@@ -36,7 +36,6 @@
 			<ul id="nav-list">
 				<li><a href="#header-section">Home</a></li>
 				<li><a href="#about-section">About</a></li>
-				<li><a href="#project-section">Projects</a></li>
 				<li><a href="#contact-section">Contact</a></li>
 			</ul>
 		</nav>
@@ -85,10 +84,8 @@
 								<div class="front-end-skills">
 									<span class="red">Front End</span>
 									<ul>
-										<li>Typescript</li>
-										<li>Angular</li>
-										<li>React</li>
-										<li>Redux</li>
+										<li>Angular with NgRx and RxJS</li>
+										<li>React with Redux</li>
 									</ul>
 								</div>
 								<div class="back-end-skills">
@@ -97,7 +94,6 @@
 										<li>Ruby on Rails</li>
 										<li>Node JS</li>
 										<li>Java Spring Boot</li>
-										<li>PostgreSQL</li>
 									</ul>
 								</div>
 							</div>
@@ -113,14 +109,9 @@
 									modern, responsive web application
 								</li>
 								<li>
-									Collaborated with non-technical colleagues and UI/UX to
-									streamline development in a fully remote setting
-								</li>
-								<li>
 									Established proper organization of containers and components
 									through custom libraries
 								</li>
-								<li>Performed Code Reviews in an agile environment</li>
 							</ul>
 						</div>
 
@@ -130,97 +121,6 @@
 								<li>Full Stack Web Development Boot Camp</li>
 								<li>Projects made using Ruby on Rails and React with Redux</li>
 							</ul>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section id="project-section">
-				<div class="container">
-					<h2 class="sub-title">My Projects</h2>
-					<div class="project-list">
-						<div class="project-card">
-							<img src="./assets/images/angular-table-preview.png" />
-							<div class="layer">
-								<div class="project-text">
-									<h3>Vehicle Data Table</h3>
-									<p>
-										This is just a small showcase of angular. I have a table
-										that can adapt to many screen sizes. Users can add, edit,
-										and delete data, as well as undo changes through the
-										snackbar.
-									</p>
-								</div>
-								<div class="project-actions">
-									<a
-										href="https://easoroysan.github.io/angular-data-table/"
-										target="_blank"
-										><button class="project-button">
-											Website
-											<i
-												class="fa-solid fa-arrow-up-right-from-square"
-											></i></button
-									></a>
-									<a
-										href="https://github.com/easoroysan/angular-data-table"
-										target="_blank"
-										><button class="project-button repo">
-											Repository <i class="fa-solid fa-code"></i></button
-									></a>
-								</div>
-							</div>
-						</div>
-						<div class="project-card">
-							<img src="./assets/images/password-generator-preview.png" />
-							<div class="layer">
-								<div class="project-text">
-									<h3>Password Generator</h3>
-									<p>
-										I made this project as I was helping someone else with their
-										password generator. The implementation of unicode was just
-										for fun.
-									</p>
-								</div>
-								<div class="project-actions">
-									<a
-										href="https://easoroysan.github.io/password-generator/"
-										target="_blank"
-										><button class="project-button">
-											Website
-											<i
-												class="fa-solid fa-arrow-up-right-from-square"
-											></i></button
-									></a>
-									<a
-										href="https://github.com/easoroysan/password-generator"
-										target="_blank"
-										><button class="project-button repo">
-											Repository <i class="fa-solid fa-code"></i></button
-									></a>
-								</div>
-							</div>
-						</div>
-						<div class="project-card">
-							<img src="./assets/images/spring-boot-logo.jpg" />
-							<div class="layer">
-								<div class="project-text">
-									<h3>Simple Server</h3>
-									<p>
-										This is a simple back end project that has REST
-										functionality for "Customer". I made sure to include some
-										logic so that a costumer cannot be created without a first
-										name and email.
-									</p>
-								</div>
-								<div class="project-actions">
-									<a
-										href="https://github.com/easoroysan/simpleserver"
-										target="_blank"
-										><button class="project-button repo">
-											Repository <i class="fa-solid fa-code"></i></button
-									></a>
-								</div>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -288,6 +188,23 @@
 						tabContents[i].classList.remove("active-tab");
 					}
 				}
+			}
+
+			// menu actions on small screens
+			const menuButton = document.getElementById("menu-button");
+			const closeButton = document.getElementById("close-button");
+			const navList = document.getElementById("nav-list");
+
+			function openMenu() {
+				menuButton.style.display = "none";
+				closeButton.style.display = "block";
+				navList.style.width = "125px";
+			}
+
+			function closeMenu() {
+				closeButton.style.display = "none";
+				menuButton.style.display = "block";
+				navList.style.width = "0";
 			}
 		</script>
 	</body>
