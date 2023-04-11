@@ -29,23 +29,6 @@ function navHighlighter() {
 }
 navHighlighter();
 
-// menu actions on small screens
-const menuButton = document.getElementById("menu-button");
-const closeButton = document.getElementById("close-button");
-const navList = document.getElementById("nav-list");
-
-function openMenu() {
-	menuButton.style.display = "none";
-	closeButton.style.display = "block";
-	navList.style.width = "125px";
-}
-
-function closeMenu() {
-	closeButton.style.display = "none";
-	menuButton.style.display = "block";
-	navList.style.width = "0";
-}
-
 // Mostly for mobile switching between horizantal and vertical
 window.addEventListener("resize", windowResizeCheck);
 
